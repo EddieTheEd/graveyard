@@ -4,62 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link href="css/style.css" rel="stylesheet">
+    <style>
+    html {
+      background-color: #131516;
+      min-height: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 3.14%; /* its pi day somewhere */
+      position: relative;
+      min-height: 100vh;
+    }
+    #dawn {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(to top,
+        #e8cdb8 0%,
+        #d9bec4 18%,
+        #b6aec2 36%,
+        #7f7ea0 54%,
+        #3f3f5c 74%,
+        #1e1f2e 90%,
+        #131516 100%);
+      opacity: 0;
+      animation: dawn-rise linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0% 100%;
+    }
+    @keyframes dawn-rise {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .content {
+      color: #e8e6f0;
+      animation: text-shift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0% 100%;
+    }
+    @keyframes text-shift {
+      0% {
+        color: #e8e6f0;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      }
+      80% {
+        color: #e8e6f0;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      }
+      90% {
+        color: #2a2a3a;
+        text-shadow: 0 1px 2px rgba(255,255,255,0.3);
+      }
+      100% {
+        color: #1a1a2e;
+        text-shadow: 0 1px 2px rgba(255,255,255,0.4);
+      }
+    }
+    ul {
+      display: block;
+    }
+    li {
+      text-align: center;
+      list-style: none;
+      padding: 1%;
+    }
+    li img {
+      width: 20%;
+    }
+    h1 img {
+      padding: 2%;
+    }
+    h1 {
+      display: flex;
+      align-items: center;
+    }
+    </style>
   </head>
   <body>
+    <div id="dawn"></div>
 
-    So reads, the final DNS records of the.toomwn.xyz.
+    <div class="content">
+      <h1>Graveyard of toomwn.xyz <img src="toomwn.ico" alt="toomwn icon"></h1>
+      So reads, the final DNS records of the.toomwn.xyz.
 
-    <h2>Sunsets</h2>
-    <i>All good things come to an end 🥹</i>
-    <ul>
-      <li>loren.toomwn.xyz<br><i>A, 192.0.2.0 (Cloudflare workers)</i></li>
-      <li>baju-s.toomwn.xyz<br><i>CNAME, rjdjcool3.github.io</i></li>
-      <li>cringe.toomwn.xyz<br><i>CNAME, grimreaper2654.github.io</i></li>
-      <li>litanki.toomwn.xyz<br><i>CNAME, anonymoof1528.github.io</i></li>
-      <li>littleroot.toomwn.xyz<br><i>CNAME, nottaro.github.io</i></li>
-      <li>page.toomwn.xyz<br><i>CNAME, notmario.github.io</i></li>
-      <li>reaper.toomwn.xyz<br><i>CNAME, reapers-notes-v3.pages.dev</i></li>
-      <li>shadowgarten.toomwn.xyz<br><i>CNAME, anonymoof1528.github.io</i></li>
-      <li>wanderer.toomwn.xyz<br><i>CNAME, rewind789.github.io</i></li>
-      <li>s███m██s-notes.toomwn.xyz<br><i>CNAME, s███-m██.github.io</i></li>
-    </ul>
+      <h2>Sunsets</h2>
+      <i>All good things come to an end 🥹</i>
+      <ul>
+        <li><strong>loren.toomwn.xyz</strong><br><i>A, 192.0.2.0 (Cloudflare workers)</i></li>
+        <li><strong>baju-s.toomwn.xyz</strong><br><i>CNAME, rjdjcool3.github.io</i></li>
+        <li><strong>cringe.toomwn.xyz</strong><br><i>CNAME, grimreaper2654.github.io</i></li>
+        <li><strong>litanki.toomwn.xyz</strong><br><i>CNAME, anonymoof1528.github.io</i></li>
+        <li><strong>littleroot.toomwn.xyz</strong><br><i>CNAME, nottaro.github.io</i></li>
+        <li><strong>page.toomwn.xyz</strong><br><i>CNAME, notmario.github.io</i></li>
+        <li><strong>reaper.toomwn.xyz</strong><br><i>CNAME, reapers-notes-v3.pages.dev</i></li>
+        <li><strong>shadowgarten.toomwn.xyz</strong><br><i>CNAME, anonymoof1528.github.io</i></li>
+        <li><strong>wanderer.toomwn.xyz</strong><br><i>CNAME, rewind789.github.io</i></li>
+        <li><strong>s███m██s-notes.toomwn.xyz</strong><br><i>CNAME, s███-m██.github.io</i></li>
+      </ul>
 
-    <h2>Moving house</h2>
-    <i>Some (no pattern btw) changed names and moved interstate</i>
-    <ul>
-      <li>demeter.toomwn.xyz -> demeter.elh.id.au</li>
-      <li>cooking.toomwn.xyz -> cooking.elh.id.au</li>
-      <li>ed.toomwn.xyz -> ed.elh.id.au</li>
-    </ul>
+      <h2>Moving house</h2>
+      <i>Some (no pattern btw) changed names and moved interstate</i>
+      <ul>
+        <li><strong>demeter.toomwn.xyz -> demeter.elh.id.au</strong></li>
+        <li><strong>cooking.toomwn.xyz -> cooking.elh.id.au</strong></li>
+        <li><strong>ed.toomwn.xyz -> ed.elh.id.au</strong></li>
+      </ul>
 
-    <h2>Put out to pasture</h2>
-    <i>The word pastiche, it sounds funny</i>
-    <ul>
-      <li>basket.toomwn.xyz<br><i>CNAME, cname.vercel-dns.com</i></li>
-      <li>dating.toomwn.xyz<br><i>CNAME, cname.vercel-dns.com</i></li>
-      <li>edsthings.toomwn.xyz<br><i>CNAME, eddietheed.github.io</i></li>
-      <li>frengraph.toomwn.xyz<br><i>CNAME, cname.vercel-dns.com</i></li>
-      <li>highproductivitymethanolcarbonylationcatalysisusingiridium.toomwn.xyz<br><i>CNAME, eddietheed.github.io</i></li>
-      <li>interburbul.toomwn.xyz<br><i>CNAME, eddietheed.github.io</i></li>
-      <li>litblog.toomwn.xyz<br><i>CNAME, eddietheed.github.io</i></li>
-      <li>pinyin.toomwn.xyz<br><i>CNAME, cname.vercel-dns.com</i></li>
-      <li>the.toomwn.xyz<br><i>CNAME, eddietheed.github.io</i></li>
+      <h2>Put out to pasture</h2>
+      <i>The word pastiche, it sounds funny</i>
+      <ul>
+        <li><strong>basket.toomwn.xyz</strong><br><i>CNAME, cname.vercel-dns.com</i></li>
+        <li><strong>dating.toomwn.xyz</strong><br><i>CNAME, cname.vercel-dns.com</i></li>
+        <li><strong>edsthings.toomwn.xyz</strong><br><i>CNAME, eddietheed.github.io</i></li>
+        <li><strong>frengraph.toomwn.xyz</strong><br><i>CNAME, cname.vercel-dns.com</i></li>
+        <li><strong>highproductivitymethanolcarbonylationcatalysisusingiridium.toomwn.xyz</strong><br><i>CNAME, eddietheed.github.io</i></li>
+        <li><strong>interburbul.toomwn.xyz</strong><br><i>CNAME, eddietheed.github.io</i></li>
+        <li><strong>litblog.toomwn.xyz</strong><br><i>CNAME, eddietheed.github.io</i></li>
+        <li><strong>pinyin.toomwn.xyz</strong><br><i>CNAME, cname.vercel-dns.com</i></li>
+        <li><strong>the.toomwn.xyz</strong><br><i>CNAME, eddietheed.github.io</i></li>
+      </ul>
 
-    </ul>
+      <h2>An end of an era</h2>
+      <i>And finally...</i>
+      <ul>
+        <li><strong>toomwn.xyz</strong><br><i>CNAME, the-toomwn.github.io</i></li>
+      </ul>
 
-    <h2>An end of an era</h2>
-    <i>And finally...</i>
-    <ul>
-      <li>toomwn.xyz<br><i>CNAME, the-toomwn.github.io</i></li>
-    </ul>
-
-
-    <h2>But maybe..?</h2>
-    <i>???</i>
-    <ul>
-      <li>blaze.toomwn.xyz<br>CNAME, ??????</li>
-    </ul>
-  
+      <h2>But maybe..?</h2>
+      <i>???</i>
+      <ul>
+        <li><strong>blaze.toomwn.xyz</strong><br>CNAME, ??????</li>
+        <li><img src="goodbye.png" alt="goodbye"></li>
+      </ul>
+    </div>
   </body>
 </html>
